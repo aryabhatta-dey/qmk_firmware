@@ -26,18 +26,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COLEMAK_MOD_DH_R3          KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLASH
 #define COLEMAK_THUMB_CLUSTER      KC_ESC,  KC_SPC,  KC_TAB,  KC_ENT,  KC_BSPC,  KC_DEL
 
+#define NULL_ROW                   KC_NO, KC_NO,    KC_NO,   KC_NO,   KC_NO
+#define SUPER_ROW                  KC_NO, KC_LSFT,  KC_LCTL, KC_LALT, KC_LGUI
+
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
-enum layer_names {
-  _COLEMAKDHM,
-  _NUM
-};
+enum layer_names { COLEMAKDHM, NUM };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_COLEMAKDHM] = LAYOUT_wrapper(
+   [COLEMAKDHM] = LAYOUT_wrapper(
                   COLEMAK_MOD_DH_L1, COLEMAK_MOD_DH_R1,
                   COLEMAK_MOD_DH_L2, COLEMAK_MOD_DH_R2,
                   COLEMAK_MOD_DH_L3, COLEMAK_MOD_DH_R3,
                         COLEMAK_THUMB_CLUSTER
+),
+          [NUM] = LAYOUT_split_3x5_3(
+                  KC_LBRC, KC_9,    KC_8,    KC_7,    KC_RBRC,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
+                  KC_SCLN, KC_3,    KC_2,    KC_1,    KC_EQL,   KC_NO,    KC_LSFT,  KC_LCTL,  KC_LALT,  KC_LGUI,
+                  KC_GRV,  KC_6,    KC_5,    KC_4,    KC_BSLS,  KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
+                                    KC_DOT,  KC_0,    KC_MINS,  KC_NO,    KC_NO,    KC_NO
 )
 };
