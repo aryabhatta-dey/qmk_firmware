@@ -18,20 +18,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
-#define COLEMAK_MOD_DH_L1       KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
-#define COLEMAK_MOD_DH_L2       KC_A,    KC_R,    KC_S,    KC_T,    KC_G
-#define COLEMAK_MOD_DH_L3       KC_Z,    KC_X,    KC_C,    KC_D,    KC_V
-
-#define COLEMAK_MOD_DH_R1       KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT
-#define COLEMAK_MOD_DH_R2       KC_M,    KC_N,    KC_E,    KC_I,    KC_O
-#define COLEMAK_MOD_DH_R3       KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLASH
-
-#define BASE_THUMB_CLUSTER      KC_ESC,  KC_SPC,  KC_TAB,  KC_ENT,  KC_BSPC,  KC_DEL
+#define COLEMAK_MOD_DH_L1          KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
+#define COLEMAK_MOD_DH_L2          KC_A,    KC_R,    KC_S,    KC_T,    KC_G
+#define COLEMAK_MOD_DH_L3          KC_Z,    KC_X,    KC_C,    KC_D,    KC_V
+#define COLEMAK_MOD_DH_R1          KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT
+#define COLEMAK_MOD_DH_R2          KC_M,    KC_N,    KC_E,    KC_I,    KC_O
+#define COLEMAK_MOD_DH_R3          KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLASH
+#define COLEMAK_THUMB_CLUSTER      KC_ESC,  KC_SPC,  KC_TAB,  KC_ENT,  KC_BSPC,  KC_DEL
 
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
 enum layer_names {
   _COLEMAKDHM,
+  _NUM
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -39,5 +38,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   COLEMAK_MOD_DH_L1, COLEMAK_MOD_DH_R1,
                   COLEMAK_MOD_DH_L2, COLEMAK_MOD_DH_R2,
                   COLEMAK_MOD_DH_L3, COLEMAK_MOD_DH_R3,
-                        BASE_THUMB_CLUSTER
-)};
+                        COLEMAK_THUMB_CLUSTER
+)
+};
