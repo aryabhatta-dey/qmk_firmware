@@ -18,9 +18,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
-#define NULL_ROW                   KC_NO, KC_NO,    KC_NO,   KC_NO,   KC_NO
-#define SUPER_ROW                  KC_NO, KC_LSFT,  KC_LCTL, KC_LALT, KC_LGUI
-#define NULL_THUMB                 KC_NO, KC_NO,    KC_NO
+#define NULL_THUMB                 KC_NO,   KC_NO,    KC_NO
+#define NULL_ROW                   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO
+#define SUPER_ROW                  KC_NO,   KC_LSFT,  KC_LCTL, KC_LALT, KC_LGUI
 
 #define COLEMAK_MOD_DH_L1          KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
 #define COLEMAK_MOD_DH_L2          KC_A,    KC_R,    KC_S,    KC_T,    KC_G
