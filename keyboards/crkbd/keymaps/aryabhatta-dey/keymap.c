@@ -22,18 +22,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NULL_ROW                   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO
 #define SUPER_ROW                  KC_NO,   KC_LSFT,  KC_LCTL, KC_LALT, KC_LGUI
 
-#define COLEMAK_MOD_DH_L1          KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
-#define COLEMAK_MOD_DH_L2          KC_A,    KC_R,    KC_S,    KC_T,    KC_G
-#define COLEMAK_MOD_DH_L3          KC_Z,    KC_X,    KC_C,    KC_D,    KC_V
-#define COLEMAK_MOD_DH_R1          KC_J,    KC_L,    KC_U,    KC_Y,    KC_QUOT
-#define COLEMAK_MOD_DH_R2          KC_M,    KC_N,    KC_E,    KC_I,    KC_O
-#define COLEMAK_MOD_DH_R3          KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLASH
-#define COLEMAK_THUMB_CLUSTER      KC_ESC,  KC_SPC,  KC_TAB,  KC_ENT,  KC_BSPC,  KC_DEL
+#define COLEMAK_MOD_DH_L1          KC_Q,    KC_W,             KC_F,             KC_P,             KC_B
+#define COLEMAK_MOD_DH_R1          KC_J,    KC_L,             KC_U,             KC_Y,             KC_QUOT
+#define COLEMAK_MOD_DH_L2          KC_A,    KC_LSFT(KC_R),    KC_LCTL(KC_S),    KC_LALT(KC_T),    KC_LGUI(KC_G)
+#define COLEMAK_MOD_DH_R2          KC_M,    KC_RSFT(KC_N),    KC_RCTL(KC_E),    KC_RALT(KC_I),    KC_RGUI(KC_O)
+#define COLEMAK_MOD_DH_L3          KC_Z,    KC_X,             KC_C,             KC_D,             KC_V
+#define COLEMAK_MOD_DH_R3          KC_K,    KC_H,             KC_COMM,          KC_DOT,           KC_SLASH
+
+#define COLEMAK_THUMB_CLUSTER      KC_ESC,  KC_SPC,  KC_TAB,  KC_ENT,  LT(NUM,  KC_BSPC),  KC_DEL
 
 #define NUM_R1                     KC_LBRC, KC_9,    KC_8,    KC_7,    KC_RBRC
 #define NUM_R2                     KC_SCLN, KC_3,    KC_2,    KC_1,    KC_EQL
 #define NUM_R3                     KC_GRV,  KC_6,    KC_5,    KC_4,    KC_BSLS
-#define NUM_THUMB_CLUSTER          KC_DOT,  KC_0,    KC_MINS, NULL_THUMB
+#define NUM_THUMB_CLUSTER          KC_DOT,  KC_0,    KC_MINS, KC_NO,   KC_TRNS, KC_NO
 
 #define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
